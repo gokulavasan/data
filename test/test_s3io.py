@@ -14,7 +14,7 @@ from torchdata.datapipes.iter import IterableWrapper, S3FileLister
 skipIfSandcastle = unittest.skipIf(IS_SANDCASTLE, "Skip for internal testing")
 
 
-@skipIfSandcastle
+@unittest.skip("S3FileListerIterDataPipe is deprecated")
 @patch("torchdata._torchdata")
 class TestS3FileListerIterDataPipe(expecttest.TestCase):
     def test_list_files(self, mock_torchdata):
